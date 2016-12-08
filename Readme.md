@@ -3,6 +3,8 @@ Test for reproducing bug in [openzipkin/brave/brave-mysql](https://github.com/op
 Contains 2 tests, each doing batch insert of multiple (int, string) pairs in a MySQL table.
 Failing test uses `rewriteBatchedStatements=true` JDBC connection parameter, 
 passing test sets `rewriteBatchedStatements=false`.
+
+Run `mvn clean test` to get NullPointerException.
  
 Test uses [embedded MariaDB](https://github.com/vorburger/MariaDB4j), 
 but this problem also happens with Oracle MySQL 5.7.13.
